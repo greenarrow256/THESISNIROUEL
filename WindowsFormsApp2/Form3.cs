@@ -45,6 +45,16 @@ namespace WindowsFormsApp2
             fr1.ShowDialog();
         }
 
+        private void Form3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private string connstring = String.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};", "localhost", "5432",
              "postgres", "grayback45", "login");
         private NpgsqlConnection conn;
